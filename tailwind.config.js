@@ -6,7 +6,12 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-
+    extend: {
+      colors: {
+        transparent: 'transparent',
+        'moon_mist': '#E4DCCF',
+      }
+    }
   },
   plugins: [],
 }
