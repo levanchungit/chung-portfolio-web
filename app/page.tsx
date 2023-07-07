@@ -4,7 +4,7 @@ import Start from "@/components/start";
 export default function Home() {
   return (
     <>
-      {/* <Header /> */}
+      <Header />
       <Start />
     </>
   );
