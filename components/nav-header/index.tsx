@@ -6,7 +6,7 @@ type Props = {};
 
 export default function Header({}: Props) {
   return (
-    <header className="flex flex-row justify-between fixed top-0 left-0 right-0 p-10 bg-slate-600">
+    <header className="flex flex-row justify-between fixed top-0 left-0 right-0 p-10 text-white">
       <div>
         <Image
           alt="Logo ChungPortfolio"
@@ -18,7 +18,6 @@ export default function Header({}: Props) {
           style={{ height: "auto", width: "80%" }}
         />
       </div>
-
       <div className="flex gap-20">
         {navMenu.map((item, index) => {
           return (
