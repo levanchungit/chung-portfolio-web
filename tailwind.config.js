@@ -10,6 +10,8 @@ module.exports = {
       colors: {
         transparent: 'transparent',
         'moon_mist': '#E4DCCF',
+        'redd': '#150506',
+        'main': '#EA5455'
       },
       backgroundImage: {
         'background-start': "url('../public/images/background.png')",
