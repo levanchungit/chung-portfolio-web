@@ -13,19 +13,13 @@ export default function Work({}: Props) {
           Selected UI web, mobile, video projects...
         </h2>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 mx-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mx-10">
         {itemWorks.map((item) => (
           <div key={item.index} className="relative my-5">
             <div
-              className={`flex flex-col text-white absolute bottom-1 ${item.titlePosition}-0 w-32 items-end`}
+              className={`flex flex-col text-white absolute bottom-1 left-0 w-32 items-start`}
             >
-              <h2
-                className={`font-bold ${
-                  item.titlePosition === "left" ? "text-right" : "text-left"
-                }`}
-              >
-                {item.title}
-              </h2>
+              <h2 className={`font-bold text-left`}>{item.title}</h2>
               <div className="flex flex-col h-px w-full bg-main"></div>
               <h2 className="">{item.numberCount}</h2>
               <svg
@@ -36,7 +30,7 @@ export default function Work({}: Props) {
                 xmlns="http://www.w3.org/2000/svg"
                 // lật ngược hình
                 className={`transform ${
-                  item.titlePosition === "left" ? "rotate-180" : ""
+                  item.titlePosition === "left" ? "rotate-0" : "rotate-180"
                 }`}
               >
                 <path
