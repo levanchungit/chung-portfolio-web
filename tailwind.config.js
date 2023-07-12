@@ -10,7 +10,7 @@ module.exports = {
       colors: {
         transparent: 'transparent',
         'moon_mist': '#E4DCCF',
-        'redd': '#150506',
+        'red-primary': '#150506',
         'main': '#EA5455'
       },
       backgroundImage: {
