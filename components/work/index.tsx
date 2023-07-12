@@ -13,7 +13,7 @@ export default function Work({}: Props) {
           Selected UI web, mobile, video projects...
         </h2>
 
-        <div className="flex flex-col justify-center items-center">
+        <div className="flex flex-col justify-center items-center mt-10 md:grid grid-cols-2">
           {itemWorks.map((item) => (
             <div key={item.index} className="relative my-5">
               <div className="text-white absolute bottom-1 left-0 w-32">
