@@ -5,7 +5,7 @@ type Props = {};
 
 export default function Header({}: Props) {
   return (
-    <header className="flex flex-row justify-between fixed top-0 left-0 right-0 px-5 py-5 text-white">
+    <header className="flex flex-row justify-between fixed top-0 left-0 right-0 px-5 py-5 text-white z-50">
       <div className="flex flex-1 justify-start items-center">
         <svg
           id="LogoChungPortfolio"

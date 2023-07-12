@@ -4,9 +4,9 @@ type Props = {};
 
 export default function Start({}: Props) {
   return (
-    <div className="flex w-full justify-center items-center min-h-screen bg-background-start bg-cover bg-center md:justify-start px-20">
-      {/* div line vertical have a dot position top of line */}
-      <div className="w-px h-screen bg-white rounded-full relative">
+    <div className="flex p-10 w-full justify-center items-center min-h-screen bg-background-start bg-cover bg-center overflow-hidden md:flex-row
+    md:justify-start md:px-20">
+      <div className="w-px h-screen bg-white rounded-full relative bottom-1/2 translate-y-[45%]">
         <div className="flex flex-col w-1 h-1 rounded-full absolute top-0 left-1/2 transform -translate-x-1/2 bg-red-800"></div>
       </div>
       <div className="flex flex-col mx-10">
