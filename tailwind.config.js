@@ -16,12 +16,9 @@ module.exports = {
       backgroundImage: {
         'background-start': "url('../public/images/background.png')",
       },
-      fontSize: {
-        'some_type-medium-30': '30px',
-        'some_type-medium-32': '30px',
-        '3xl': ['1.875rem', {
-          fontWeight: '500',
-        }],
+      fontFamily: {
+        'stm': ['Sometype Mono', 'monospace'],
+        'ls': ['League Spartan', 'sans-serif']
       }
     }
   },

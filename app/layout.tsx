@@ -51,7 +51,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={sometype_mono.className}>{children}</body>
+      {/* use 2 fonts above */}
+      <body className={`${league_spartan} ${sometype_mono}`}>{children}</body>
     </html>
   );
 }

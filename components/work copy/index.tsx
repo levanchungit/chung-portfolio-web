@@ -22,18 +22,7 @@ export default function Work({}: Props) {
               <h2 className={`font-bold text-left`}>{item.title}</h2>
               <div className="flex flex-col h-px w-full bg-main"></div>
               <h2 className="">{item.numberCount}</h2>
-              <svg
-                width="32"
-                height="32"
-                viewBox="0 0 32 32"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M13.3333 22.6667L20 16L13.3333 9.33337V22.6667Z"
-                  fill="#F9F5EB"
-                />
-              </svg>
+              
             </div>
 
             <div className="flex flex-1 justify-center items-center">
