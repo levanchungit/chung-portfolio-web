@@ -71,7 +71,7 @@ export default function Header({}: Props) {
         {navMenu.map((item, index) => {
           return (
             <Link key={index} href={item.link}>
-              {item.name}
+              {item.name}/&gt;
             </Link>
           );
         })}
