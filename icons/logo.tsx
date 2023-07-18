@@ -1,7 +1,6 @@
 type Props = {};
 
-export default function Logo({ }: Props) {
-  console.log("Logo");
+export default function Logo({}: Props) {
   return (
     <svg
       id="LogoChungPortfolio"

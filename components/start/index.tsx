@@ -5,7 +5,7 @@ type Props = {};
 export default function Start({}: Props) {
   return (
     <div
-      className="flex w-full h-screen items-center px-12 bg-background-start bg-cover bg-center 
+      className="flex w-full h-screen items-center px-12 bg-background-start bg-cover bg-center overflow-hidden
       md:flex-row md:justify-start md:px-20"
     >
       <div className="flex flex-1 h-full items-center gap-12 relative">
