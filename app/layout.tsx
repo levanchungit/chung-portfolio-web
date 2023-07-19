@@ -1,4 +1,5 @@
 import "./globals.css";
+import "../styles/components.scss";
 import { League_Spartan } from "next/font/google";
 import localFont from "next/font/local";
 

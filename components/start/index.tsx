@@ -16,7 +16,7 @@ export default function Start({}: Props) {
           <h1 className="text-30 text-moon_mist font-stm">Hi/&gt;</h1>
           <div className="flex gap-2">
             <h2 className="text-white 32 font-ls">I am</h2>
-            <h2 className="32 font-bold text-main font-ls">Le Van Chung</h2>
+            <h2 className="text-name">Le Van Chung</h2>
           </div>
           <h2 className="text-white 32 font-bold font-ls">Mobile Developer</h2>
           <h2 className="text-white 32 font-ls">Let me show you...</h2>
