@@ -63,3 +63,28 @@ export const itemWorks: IItemWork[] = [
     titlePosition: "left",
   },
 ];
+
+type IItemSkills = string[];
+
+export const lstSkills: IItemSkills = [
+  "HTML/CSS/JS",
+  "Javascript",
+  "Node.js",
+  "C#",
+  "Photoshop",
+  "Illustrator",
+  "Figma",
+  "Bootstrap/Tailwind",
+  "Tailwind",
+  "npm/yarn",
+  "Firebase",
+  "MySQL/MongoDB",
+  "UX/UI",
+  "Java",
+  "Unity",
+  "TypeScript",
+  "NextJS",
+];
+
+
+
