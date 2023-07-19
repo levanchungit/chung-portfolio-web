@@ -86,5 +86,27 @@ export const lstSkills: IItemSkills = [
   "NextJS",
 ];
 
+type IItemExperience = {
+  position: string;
+  where: string;
+  from: string;
+  to: string;
+  description: string;
+};
 
-
+export const lstExperience: IItemExperience[] = [
+  {
+    where: "TinVietSoft Human Resource Management",
+    position: "Full-stack Developer",
+    from: "Feb 2023",
+    to: "July 2023",
+    description: "",
+  },
+  {
+    where: "TinVietSoft human resource management",
+    position: "Frontend Developer",
+    from: "Feb 2023",
+    to: "July 2023",
+    description: "",
+  },
+];

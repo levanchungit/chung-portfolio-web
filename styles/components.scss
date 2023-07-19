@@ -1,3 +1,21 @@
+.line {
+  @apply flex flex-col w-2 h-2 rounded-full absolute top-0 left-1/2 transform -translate-x-1/2 bg-main
+}
+
+.text {
+  @apply text-16 text-moon_mist font-bold font-stm
+}
+
 .text-name {
   @apply font-bold text-main font-ls
 }
+
+.text_number {
+  @apply text-comment left-[-50px] top-0 relative
+}
+
+.dot {
+  @apply opacity-0 hidden sm:inline
+}
+
+

@@ -1,59 +1,51 @@
-import { lstSkills } from "@/global/constants";
+import { lstExperience, lstSkills } from "@/global/constants";
 import React from "react";
 
 type Props = {};
 
 export default function About({}: Props) {
+  let lineNumber = 1;
   return (
-    <div className="flex w-full h-screen px-12 bg-about bg-cover bg-center overflow-hidden h-[1500px] md:flex-row md:justify-start md:px-10">
+    <div className="flex w-full h-[1200px] px-12 bg-about bg-cover bg-center overflow-hidden md:flex-row md:justify-start md:px-10">
       <div className="flex flex-1 h-full gap-4 relative">
         <div className="w-0.5 h-full bg-main rounded-full relative top-[2%]">
-          <div className="flex flex-col w-2 h-2 rounded-full absolute top-0 left-1/2 transform -translate-x-1/2 bg-main"></div>
+          <div className="line"></div>
         </div>
         <div className="flex flex-1 flex-col relative top-[1%]">
-          <h1 className="text-18 font-medium text-moon_mist font-stm">
-            About/&gt;
-          </h1>
+          <h1 className="text-18 text">About/&gt;</h1>
 
           <div className="flex flex-col gap-2 absolute top-[4%]">
-            <p className="text-16 text-moon_mist font-bold font-stm">
-              <span className="text-comment left-[-50px] top-0 relative">
-                1
-              </span>
+            <p className="text">
+              <span className="text_number">{lineNumber}</span>
               <span className="text-main">function</span>{" "}
               <span className="text-moon_mist">createLeVanChung() &#123;</span>
             </p>
 
-            <p className="text-16 text-moon_mist font-bold font-stm ">
-              <span className="text-comment left-[-50px] top-0 relative">
-                2
-              </span>
-              <span className="opacity-0 hidden sm:inline">...</span>
+            <p className="text">
+              <span className="text_number">{lineNumber + 1}</span>
+              <span className="dot">...</span>
               <span className="text-comment">{"//"} I can, because I did.</span>
             </p>
 
-            <p className="text-16 text-moon_mist font-bold font-stm ">
-              <span className="text-comment left-[-50px] top-0 relative">
-                3
-              </span>
-              <span className="opacity-0 hidden sm:inline">...</span>
+            <p className="text">
+              <span className="text_number">{lineNumber + 2}</span>
+              <span className="dot">...</span>
               <span className="text-comment">
                 {"//"} My vast variety of skills is continuously expanding.
               </span>
             </p>
 
-            <p className="text-16 text-moon_mist font-bold font-stm ">
-              <span className="text-comment left-[-50px] top-0 relative">
-                4
-              </span>
-              <span className="opacity-0 hidden sm:inline">...</span>
+            <p className="text">
+              <span className="text_number">{lineNumber + 3}</span>
+              <span className="dot">...</span>
               <span className="text-main">return </span>
               <span className="text-moon_mist">{"{"}</span>
             </p>
 
-            <div className="text-16 text-moon_mist font-bold font-stm">
+            <div className="text">
               <p>
-                <span className="opacity-0 hidden sm:inline">......</span>
+                <span className="text_number">{lineNumber + 4}</span>
+                <span className="dot">......</span>
                 name ={" "}
                 <span className="text-green font-normal">
                   {"'"}Le Van Chung{"'"}
@@ -61,7 +53,8 @@ export default function About({}: Props) {
                 ,
               </p>
               <p>
-                <span className="opacity-0 hidden sm:inline">......</span>
+                <span className="text_number">{lineNumber + 5}</span>
+                <span className="dot">......</span>
                 dayOfBirth ={" "}
                 <span className="text-green font-normal">
                   {"'"}2003-08-08{"'"}
@@ -69,7 +62,8 @@ export default function About({}: Props) {
                 ,
               </p>
               <p>
-                <span className="opacity-0 hidden sm:inline">......</span>
+                <span className="text_number">{lineNumber + 6}</span>
+                <span className="dot">......</span>
                 email ={" "}
                 <span className="text-green font-normal">
                   {"'"}levanchung.it@gmail.com{"'"}
@@ -77,220 +71,149 @@ export default function About({}: Props) {
                 ,
               </p>
               <p>
-                <span className="opacity-0 hidden sm:inline">......</span>
+                <span className="text_number">{lineNumber + 7}</span>
+                <span className="dot">......</span>
                 phone ={" "}
                 <span className="text-green font-normal">
                   {"'"}0378484047{"'"}
                 </span>
                 ,
               </p>
-
               {/* WORK EXPERIENCE */}
               <p>
-                <span className="opacity-0 hidden sm:inline">......</span>
+                <span className="text_number">{lineNumber + 8}</span>
+                <span className="dot">......</span>
                 <span className="text-orange">
                   workExperience <span>()</span>{" "}
                 </span>
                 {"{"}
               </p>
-              <p className="text-16 text-moon_mist font-bold font-stm ">
-                <span className="opacity-0 hidden sm:inline">.........</span>
-                <span className="text-main">return </span>
-                <span className="text-moon_mist">{"["}</span>
-              </p>
+              {lstExperience.map((item, index) => {
+                const startLine = lineNumber * 10 + index;
 
-              <p className="text-16 text-moon_mist font-bold font-stm ">
-                <span className="opacity-0 hidden sm:inline">............</span>
-                <span className="text-moon_mist">{"{"}</span>
-              </p>
+                return (
+                  <React.Fragment key={index}>
+                    <p className="text">
+                      <span className="text_number">{startLine}</span>
+                      <span className="dot">............</span>
+                      <span className="text-moon_mist">{"{"}</span>
 
-              <p className="text-16 text-moon_mist font-bold font-stm ">
-                <span className="opacity-0 hidden sm:inline">
-                  ...............
-                </span>
-                <span className="text-moon_mist">company : </span>
-                <span className="text-green font-normal">
-                  {"'"}TinVietSoft human resource management{"'"}
-                </span>
-                ,
-              </p>
+                      {Object.entries(item).map(([key, value], subIndex) => {
+                        const subLine = startLine + subIndex + 1;
+                        return (
+                          <p className="text" key={subIndex}>
+                            <span className="text_number">{subLine}</span>
+                            <span className="dot">...............</span>
+                            <span className="text-moon_mist">{key} : </span>
+                            <span className="text-green font-normal">
+                              {"'"}
+                              {value}
+                              {"'"}
+                            </span>
+                            ,
+                          </p>
+                        );
+                      })}
 
-              <p className="text-16 text-moon_mist font-bold font-stm ">
-                <span className="opacity-0 hidden sm:inline">
-                  ...............
-                </span>
-                <span className="text-moon_mist">position : </span>
-                <span className="text-green font-normal">
-                  {"'"}Full-stack Developer{"'"}
-                </span>
-                ,
-              </p>
+                      <span className="text_number">
+                        {startLine + Object.entries(item).length + 1}
+                      </span>
+                      <span className="dot">............</span>
+                      <span className="text-moon_mist">{"},"}</span>
+                    </p>
+                  </React.Fragment>
+                );
+              })}
 
-              <p className="text-16 text-moon_mist font-bold font-stm ">
-                <span className="opacity-0 hidden sm:inline">
-                  ...............
+              <p>
+                <span className="text_number">
+                  {lineNumber + lstExperience.length + 9}
                 </span>
-                <span className="text-moon_mist">from : </span>
-                <span className="text-green font-normal">
-                  {"'"}Feb 2023{"'"}
-                </span>
-                ,<span className="text-moon_mist"> from : </span>
-                <span className="text-green font-normal">
-                  {"'"}July 2023{"'"}
-                </span>
-              </p>
-
-              <p className="text-16 text-moon_mist font-bold font-stm ">
-                <span className="opacity-0 hidden sm:inline">............</span>
-                <span className="text-moon_mist">{"}"},</span>
-              </p>
-
-              <p className="text-16 text-moon_mist font-bold font-stm ">
-                <span className="opacity-0 hidden sm:inline">............</span>
-                <span className="text-moon_mist">{"{"}</span>
-              </p>
-
-              <p className="text-16 text-moon_mist font-bold font-stm ">
-                <span className="opacity-0 hidden sm:inline">
-                  ...............
-                </span>
-                <span className="text-moon_mist">project : </span>
-                <span className="text-green font-normal">
-                  {"'"}SevenShop - E-commerce{"'"}
-                </span>
-                ,
-              </p>
-
-              <p className="text-16 text-moon_mist font-bold font-stm ">
-                <span className="opacity-0 hidden sm:inline">
-                  ...............
-                </span>
-                <span className="text-moon_mist">position : </span>
-                <span className="text-green font-normal">
-                  {"'"}Leader{"'"}
-                </span>
-                ,
-              </p>
-
-              <p className="text-16 text-moon_mist font-bold font-stm ">
-                <span className="opacity-0 hidden sm:inline">
-                  ...............
-                </span>
-                <span className="text-moon_mist">from : </span>
-                <span className="text-green font-normal">
-                  {"'"}Jan 2023{"'"}
-                </span>
-                ,<span className="text-moon_mist"> from : </span>
-                <span className="text-green font-normal">
-                  {"'"}April 2023{"'"}
-                </span>
-              </p>
-
-              <p className="text-16 text-moon_mist font-bold font-stm ">
-                <span className="opacity-0 hidden sm:inline">
-                  ...............
-                </span>
-                <span className="text-moon_mist">description : </span>
-                <span className="text-green font-normal">
-                  {"'"}Build a app/website for selling products online{"'"}
-                </span>
-              </p>
-
-              <p className="text-16 text-moon_mist font-bold font-stm ">
-                <span className="opacity-0 hidden sm:inline">............</span>
-                <span className="text-moon_mist">{"}"},</span>
-              </p>
-
-              <p className="text-16 text-moon_mist font-bold font-stm ">
-                <span className="opacity-0 hidden sm:inline">.........</span>
+                <span className="dot">.........</span>
                 <span className="text-moon_mist">{"]"} </span>
               </p>
 
               <p>
-                <span className="opacity-0 hidden sm:inline">......</span>
+                <span className="text_number">{lineNumber + 10}</span>
+                <span className="dot">......</span>
                 <span>{"}"}</span>,
               </p>
-
               {/* EDUCATION */}
               <p>
-                <span className="opacity-0 hidden sm:inline">......</span>
+                <span className="text_number">{lineNumber + 10}</span>
+                <span className="dot">......</span>
                 <span className="text-orange">
                   education <span>()</span>{" "}
                 </span>
                 {"{"}
               </p>
-              <p className="text-16 text-moon_mist font-bold font-stm ">
-                <span className="opacity-0 hidden sm:inline">.........</span>
+              <p className="text">
+                <span className="text_number">{lineNumber + 10}</span>
+                <span className="dot">.........</span>
                 <span className="text-main">return </span>
                 <span className="text-moon_mist">{"["}</span>
               </p>
-
-              <p className="text-16 text-moon_mist font-bold font-stm ">
-                <span className="opacity-0 hidden sm:inline">............</span>
+              <p className="text">
+                <span className="text_number">{lineNumber + 10}</span>
+                <span className="dot">............</span>
                 <span className="text-moon_mist">{"{"}</span>
               </p>
-
-              <p className="text-16 text-moon_mist font-bold font-stm ">
-                <span className="opacity-0 hidden sm:inline">
-                  ...............
-                </span>
+              <p className="text">
+                <span className="text_number">{lineNumber + 10}</span>
+                <span className="dot">...............</span>
                 <span className="text-moon_mist">name : </span>
                 <span className="text-green font-normal">
                   {"'"}FPT Polytechnic{"'"}
                 </span>
                 ,
               </p>
-
-              <p className="text-16 text-moon_mist font-bold font-stm ">
-                <span className="opacity-0 hidden sm:inline">
-                  ...............
-                </span>
+              <p className="text">
+                <span className="text_number">{lineNumber + 10}</span>
+                <span className="dot">...............</span>
                 <span className="text-moon_mist">major : </span>
                 <span className="text-green font-normal">
                   {"'"}Mobile Developer (React Native){"'"}
                 </span>
                 ,
               </p>
-
-              <p className="text-16 text-moon_mist font-bold font-stm ">
-                <span className="opacity-0 hidden sm:inline">
-                  ...............
-                </span>
-                <span className="text-moon_mist">time : </span>
+              <p className="text">
+                <span className="text_number">{lineNumber + 10}</span>
+                <span className="dot">...............</span>
+                <span className="text-moon_mist">from : </span>
                 <span className="text-green font-normal">
                   {"'"}Jan 2021{"'"}
                 </span>
-                ,<span className="text-moon_mist"> from : </span>
+                ,<span className="text-moon_mist"> to : </span>
                 <span className="text-green font-normal">
                   {"'"}May 2023{"'"}
                 </span>
               </p>
-
-              <p className="text-16 text-moon_mist font-bold font-stm ">
-                <span className="opacity-0 hidden sm:inline">............</span>
+              <p className="text">
+                <span className="text_number">{lineNumber + 10}</span>
+                <span className="dot">............</span>
                 <span className="text-moon_mist">{"}"},</span>
               </p>
-
-              <p className="text-16 text-moon_mist font-bold font-stm ">
-                <span className="opacity-0 hidden sm:inline">.........</span>
+              <p className="text">
+                <span className="text_number">{lineNumber + 10}</span>
+                <span className="dot">.........</span>
                 <span className="text-moon_mist">{"]"} </span>
               </p>
-
               <p>
-                <span className="opacity-0 hidden sm:inline">......</span>
+                <span className="text_number">{lineNumber + 10}</span>
+                <span className="dot">......</span>
                 <span>{"}"}</span>,
               </p>
-
               {/* SKILLS */}
               <p>
-                <span className="opacity-0 hidden sm:inline">......</span>
+                <span className="text_number">{lineNumber + 10}</span>
+                <span className="dot">......</span>
                 <span className="text-orange">
                   skills <span>()</span>{" "}
                 </span>
                 {"{"}
               </p>
-              <p className="text-16 text-moon_mist font-bold font-stm ">
-                <span className="opacity-0 hidden sm:inline">.........</span>
+              <p className="text">
+                <span className="dot">.........</span>
                 <span className="text-main">return </span>
                 <span className="text-moon_mist">{"["} </span>
                 <span className="text-moon_mist">
@@ -306,14 +229,12 @@ export default function About({}: Props) {
                   })}
                 </span>
               </p>
-
-              <p className="text-16 text-moon_mist font-bold font-stm ">
-                <span className="opacity-0 hidden sm:inline">.........</span>
+              <p className="text">
+                <span className="dot">.........</span>
                 <span className="text-moon_mist">{"]"} </span>
               </p>
-
               <p>
-                <span className="opacity-0 hidden sm:inline">......</span>
+                <span className="dot">......</span>
                 <span>{"}"}</span>,
               </p>
             </div>
