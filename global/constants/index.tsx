@@ -66,7 +66,7 @@ export const itemWorks: IItemWork[] = [
 
 type IItemSkills = string[];
 
-export const lstSkills: IItemSkills = [
+export const listSkills: IItemSkills = [
   "HTML/CSS/JS",
   "Javascript",
   "Node.js",
@@ -94,7 +94,7 @@ type IItemExperience = {
   description: string;
 };
 
-export const lstExperience: IItemExperience[] = [
+export const listExperience: IItemExperience[] = [
   {
     where: "TinVietSoft Human Resource Management",
     position: "Full-stack Developer",
@@ -110,3 +110,26 @@ export const lstExperience: IItemExperience[] = [
     description: "",
   },
 ];
+
+type IItemEducation = {
+  school: string;
+  major: string;
+  from: string;
+  to: string;
+};
+
+export const listEducation: IItemEducation[] = [
+  {
+    school: "University of Information Technology",
+    major: "Software Engineering",
+    from: "2021",
+    to: "2025",
+  },
+  {
+    school: "University of Information Technology",
+    major: "Software Engineering",
+    from: "2021",
+    to: "2025",
+  },
+];
+

@@ -1,20 +1,20 @@
-import { lstExperience, lstSkills } from "@/global/constants";
-import React from "react";
+import { listEducation, listExperience, listSkills } from "@/global/constants";
 
 type Props = {};
 
 export default function About({}: Props) {
   let lineNumber = 1;
+  let lineOffset = 0;
   return (
-    <div className="flex w-full h-[1200px] px-12 bg-about bg-cover bg-center overflow-hidden md:flex-row md:justify-start md:px-10">
-      <div className="flex flex-1 h-full gap-4 relative">
+    <div className="flex w-full min-h-screen px-12 bg-about bg-cover bg-center overflow-hidden md:flex-row md:justify-start md:px-10">
+      <div className="flex flex-1 min-h-screen gap-4 relative">
         <div className="w-0.5 h-full bg-main rounded-full relative top-[2%]">
           <div className="line"></div>
         </div>
-        <div className="flex flex-1 flex-col relative top-[1%]">
+        <div className="flex flex-1 flex-col top-[1%]">
           <h1 className="text-18 text">About/&gt;</h1>
 
-          <div className="flex flex-col gap-2 absolute top-[4%]">
+          <div className="flex flex-col gap-2 absolute">
             <p className="text">
               <span className="text_number">{lineNumber}</span>
               <span className="text-main">function</span>{" "}
@@ -48,7 +48,7 @@ export default function About({}: Props) {
                 <span className="dot">......</span>
                 name ={" "}
                 <span className="text-green font-normal">
-                  {"'"}Le Van Chung{"'"}
+                  &quot;Le Van Chung&quot;
                 </span>
                 ,
               </p>
@@ -57,7 +57,7 @@ export default function About({}: Props) {
                 <span className="dot">......</span>
                 dayOfBirth ={" "}
                 <span className="text-green font-normal">
-                  {"'"}2003-08-08{"'"}
+                  &quot;2003-08-08&quot;
                 </span>
                 ,
               </p>
@@ -66,7 +66,7 @@ export default function About({}: Props) {
                 <span className="dot">......</span>
                 email ={" "}
                 <span className="text-green font-normal">
-                  {"'"}levanchung.it@gmail.com{"'"}
+                  &quot;levanchung.it@gmail.com&quot;
                 </span>
                 ,
               </p>
@@ -75,7 +75,7 @@ export default function About({}: Props) {
                 <span className="dot">......</span>
                 phone ={" "}
                 <span className="text-green font-normal">
-                  {"'"}0378484047{"'"}
+                  &quot;0378484047&quot;
                 </span>
                 ,
               </p>
@@ -87,10 +87,17 @@ export default function About({}: Props) {
                   workExperience <span>()</span>{" "}
                 </span>
                 {"{"}
+                <p className="text">
+                  <span className="text_number">{lineNumber + 9}</span>
+                  <span className="dot">.........</span>
+                  <span className="text-main">return </span>
+                  <span className="text-moon_mist">{"["}</span>
+                </p>
               </p>
-
-              {lstExperience.map((item, index) => {
-                const startLine = (lineNumber + 9) * (index + 1);
+              {listExperience.map((item, index) => {
+                let numPair = Object.keys(item).length;
+                let startLine = lineNumber + 10 + index * (numPair + 2);
+                lineOffset += numPair + 2;
 
                 return (
                   <p className="text" key={index}>
@@ -99,7 +106,7 @@ export default function About({}: Props) {
                     <span className="text-moon_mist">{"{"}</span>
 
                     {Object.entries(item).map(([key, value], subIndex) => {
-                      const subLine = startLine + subIndex + 1;
+                      let subLine = startLine + subIndex + 1;
                       return (
                         <p className="text" key={subIndex}>
                           <span className="text_number">{subLine}</span>
@@ -116,7 +123,7 @@ export default function About({}: Props) {
                     })}
 
                     <span className="text_number">
-                      {startLine + Object.entries(item).length + 1}
+                      {startLine + numPair + 1}
                     </span>
                     <span className="dot">............</span>
                     <span className="text-moon_mist">{"},"}</span>
@@ -126,20 +133,23 @@ export default function About({}: Props) {
 
               <p>
                 <span className="text_number">
-                  {lineNumber + lstExperience.length + 9}
+                  {lineNumber + 10 + lineOffset}
                 </span>
                 <span className="dot">.........</span>
-                <span className="text-moon_mist">{"]"} </span>
+                <span className="text-moon_mist">{"]"}</span>
               </p>
-
               <p>
-                <span className="text_number">{lineNumber + 10}</span>
+                <span className="text_number">
+                  {lineNumber + 11 + lineOffset}
+                </span>
                 <span className="dot">......</span>
                 <span>{"}"}</span>,
               </p>
               {/* EDUCATION */}
               <p>
-                <span className="text_number">{lineNumber + 10}</span>
+                <span className="text_number">
+                  {lineNumber + 12 + lineOffset}
+                </span>
                 <span className="dot">......</span>
                 <span className="text-orange">
                   education <span>()</span>{" "}
@@ -147,51 +157,59 @@ export default function About({}: Props) {
                 {"{"}
               </p>
               <p className="text">
-                <span className="text_number">{lineNumber + 10}</span>
+                <span className="text_number">
+                  {lineNumber + 13 + lineOffset}
+                </span>
                 <span className="dot">.........</span>
                 <span className="text-main">return </span>
                 <span className="text-moon_mist">{"["}</span>
               </p>
-              <p className="text">
-                <span className="text_number">{lineNumber + 10}</span>
-                <span className="dot">............</span>
-                <span className="text-moon_mist">{"{"}</span>
-              </p>
-              <p className="text">
-                <span className="text_number">{lineNumber + 10}</span>
-                <span className="dot">...............</span>
-                <span className="text-moon_mist">name : </span>
-                <span className="text-green font-normal">
-                  {"'"}FPT Polytechnic{"'"}
+              {listEducation.map((item, index) => {
+                let numPair = Object.keys(item).length;
+                let startLine =
+                  lineNumber + 14 + lineOffset + index * (numPair + 2);
+                lineOffset += numPair + 2;
+
+                return (
+                  <p className="text" key={index}>
+                    <span className="text_number">{startLine}</span>
+                    <span className="dot">............</span>
+                    <span className="text-moon_mist">{"{"}</span>
+
+                    {Object.entries(item).map(([key, value], subIndex) => {
+                      let subLine = startLine + subIndex + 1;
+                      return (
+                        <p className="text" key={subIndex}>
+                          <span className="text_number">{subLine}</span>
+                          <span className="dot">...............</span>
+                          <span className="text-moon_mist">{key} : </span>
+                          <span className="text-green font-normal">
+                            {"'"}
+                            {value}
+                            {"'"}
+                          </span>
+                          ,
+                        </p>
+                      );
+                    })}
+
+                    <span className="text_number">
+                      {startLine + numPair + 1}
+                    </span>
+                    <span className="dot">............</span>
+                    <span className="text-moon_mist">{"},"}</span>
+                  </p>
+                );
+              })}
+
+              <p>
+                <span className="text_number">
+                  {lineNumber + 14 + lineOffset}
                 </span>
-                ,
+                <span className="dot">.........</span>
+                <span className="text-moon_mist">{"]"}</span>
               </p>
-              <p className="text">
-                <span className="text_number">{lineNumber + 10}</span>
-                <span className="dot">...............</span>
-                <span className="text-moon_mist">major : </span>
-                <span className="text-green font-normal">
-                  {"'"}Mobile Developer (React Native){"'"}
-                </span>
-                ,
-              </p>
-              <p className="text">
-                <span className="text_number">{lineNumber + 10}</span>
-                <span className="dot">...............</span>
-                <span className="text-moon_mist">from : </span>
-                <span className="text-green font-normal">
-                  {"'"}Jan 2021{"'"}
-                </span>
-                ,<span className="text-moon_mist"> to : </span>
-                <span className="text-green font-normal">
-                  {"'"}May 2023{"'"}
-                </span>
-              </p>
-              <p className="text">
-                <span className="text_number">{lineNumber + 10}</span>
-                <span className="dot">............</span>
-                <span className="text-moon_mist">{"}"},</span>
-              </p>
+
               <p className="text">
                 <span className="text_number">{lineNumber + 10}</span>
                 <span className="dot">.........</span>
@@ -216,11 +234,11 @@ export default function About({}: Props) {
                 <span className="text-main">return </span>
                 <span className="text-moon_mist">{"["} </span>
                 <span className="text-moon_mist">
-                  {lstSkills.map((item, index) => {
+                  {listSkills.map((item, index) => {
                     return (
                       <span key={index} className="text-green">
                         {"'" + item + "'"}
-                        {index !== lstSkills.length - 1 && (
+                        {index !== listSkills.length - 1 && (
                           <span className="text-moon_mist">, </span>
                         )}
                       </span>
