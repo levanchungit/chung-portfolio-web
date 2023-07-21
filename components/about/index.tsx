@@ -1,20 +1,24 @@
 import { listEducation, listExperience, listSkills } from "@/global/constants";
+import WorkExperience from "./work_experience";
+import Education from "./education";
+import Skills from "./skills";
 
 type Props = {};
 
 export default function About({}: Props) {
   let lineNumber = 1;
   let lineOffset = 0;
+  let lineOffset2 = 0;
   return (
     <div className="flex w-full min-h-screen px-12 bg-about bg-cover bg-center overflow-hidden md:flex-row md:justify-start md:px-10">
-      <div className="flex flex-1 min-h-screen gap-4 relative">
+      <div className="flex flex-1 h-[1200px] gap-4 relative">
         <div className="w-0.5 h-full bg-main rounded-full relative top-[2%]">
           <div className="line"></div>
         </div>
-        <div className="flex flex-1 flex-col top-[1%]">
+        <div className="flex flex-1 flex-col relative top-[1%]">
           <h1 className="text-18 text">About/&gt;</h1>
 
-          <div className="flex flex-col gap-2 absolute">
+          <div className="flex flex-col gap-2 absolute top-[4%]">
             <p className="text">
               <span className="text_number">{lineNumber}</span>
               <span className="text-main">function</span>{" "}
@@ -80,180 +84,11 @@ export default function About({}: Props) {
                 ,
               </p>
               {/* WORK EXPERIENCE */}
-              <p>
-                <span className="text_number">{lineNumber + 8}</span>
-                <span className="dot">......</span>
-                <span className="text-orange">
-                  workExperience <span>()</span>{" "}
-                </span>
-                {"{"}
-                <p className="text">
-                  <span className="text_number">{lineNumber + 9}</span>
-                  <span className="dot">.........</span>
-                  <span className="text-main">return </span>
-                  <span className="text-moon_mist">{"["}</span>
-                </p>
-              </p>
-              {listExperience.map((item, index) => {
-                let numPair = Object.keys(item).length;
-                let startLine = lineNumber + 10 + index * (numPair + 2);
-                lineOffset += numPair + 2;
-
-                return (
-                  <p className="text" key={index}>
-                    <span className="text_number">{startLine}</span>
-                    <span className="dot">............</span>
-                    <span className="text-moon_mist">{"{"}</span>
-
-                    {Object.entries(item).map(([key, value], subIndex) => {
-                      let subLine = startLine + subIndex + 1;
-                      return (
-                        <p className="text" key={subIndex}>
-                          <span className="text_number">{subLine}</span>
-                          <span className="dot">...............</span>
-                          <span className="text-moon_mist">{key} : </span>
-                          <span className="text-green font-normal">
-                            {"'"}
-                            {value}
-                            {"'"}
-                          </span>
-                          ,
-                        </p>
-                      );
-                    })}
-
-                    <span className="text_number">
-                      {startLine + numPair + 1}
-                    </span>
-                    <span className="dot">............</span>
-                    <span className="text-moon_mist">{"},"}</span>
-                  </p>
-                );
-              })}
-
-              <p>
-                <span className="text_number">
-                  {lineNumber + 10 + lineOffset}
-                </span>
-                <span className="dot">.........</span>
-                <span className="text-moon_mist">{"]"}</span>
-              </p>
-              <p>
-                <span className="text_number">
-                  {lineNumber + 11 + lineOffset}
-                </span>
-                <span className="dot">......</span>
-                <span>{"}"}</span>,
-              </p>
+              <WorkExperience />
               {/* EDUCATION */}
-              <p>
-                <span className="text_number">
-                  {lineNumber + 12 + lineOffset}
-                </span>
-                <span className="dot">......</span>
-                <span className="text-orange">
-                  education <span>()</span>{" "}
-                </span>
-                {"{"}
-              </p>
-              <p className="text">
-                <span className="text_number">
-                  {lineNumber + 13 + lineOffset}
-                </span>
-                <span className="dot">.........</span>
-                <span className="text-main">return </span>
-                <span className="text-moon_mist">{"["}</span>
-              </p>
-              {listEducation.map((item, index) => {
-                let numPair = Object.keys(item).length;
-                let startLine =
-                  lineNumber + 14 + lineOffset + index * (numPair + 2);
-                lineOffset += numPair + 2;
-
-                return (
-                  <p className="text" key={index}>
-                    <span className="text_number">{startLine}</span>
-                    <span className="dot">............</span>
-                    <span className="text-moon_mist">{"{"}</span>
-
-                    {Object.entries(item).map(([key, value], subIndex) => {
-                      let subLine = startLine + subIndex + 1;
-                      return (
-                        <p className="text" key={subIndex}>
-                          <span className="text_number">{subLine}</span>
-                          <span className="dot">...............</span>
-                          <span className="text-moon_mist">{key} : </span>
-                          <span className="text-green font-normal">
-                            {"'"}
-                            {value}
-                            {"'"}
-                          </span>
-                          ,
-                        </p>
-                      );
-                    })}
-
-                    <span className="text_number">
-                      {startLine + numPair + 1}
-                    </span>
-                    <span className="dot">............</span>
-                    <span className="text-moon_mist">{"},"}</span>
-                  </p>
-                );
-              })}
-
-              <p>
-                <span className="text_number">
-                  {lineNumber + 14 + lineOffset}
-                </span>
-                <span className="dot">.........</span>
-                <span className="text-moon_mist">{"]"}</span>
-              </p>
-
-              <p className="text">
-                <span className="text_number">{lineNumber + 10}</span>
-                <span className="dot">.........</span>
-                <span className="text-moon_mist">{"]"} </span>
-              </p>
-              <p>
-                <span className="text_number">{lineNumber + 10}</span>
-                <span className="dot">......</span>
-                <span>{"}"}</span>,
-              </p>
+              <Education/>
               {/* SKILLS */}
-              <p>
-                <span className="text_number">{lineNumber + 10}</span>
-                <span className="dot">......</span>
-                <span className="text-orange">
-                  skills <span>()</span>{" "}
-                </span>
-                {"{"}
-              </p>
-              <p className="text">
-                <span className="dot">.........</span>
-                <span className="text-main">return </span>
-                <span className="text-moon_mist">{"["} </span>
-                <span className="text-moon_mist">
-                  {listSkills.map((item, index) => {
-                    return (
-                      <span key={index} className="text-green">
-                        {"'" + item + "'"}
-                        {index !== listSkills.length - 1 && (
-                          <span className="text-moon_mist">, </span>
-                        )}
-                      </span>
-                    );
-                  })}
-                </span>
-              </p>
-              <p className="text">
-                <span className="dot">.........</span>
-                <span className="text-moon_mist">{"]"} </span>
-              </p>
-              <p>
-                <span className="dot">......</span>
-                <span>{"}"}</span>,
-              </p>
+              <Skills/>
             </div>
           </div>
         </div>
