@@ -88,40 +88,39 @@ export default function About({}: Props) {
                 </span>
                 {"{"}
               </p>
+
               {lstExperience.map((item, index) => {
-                const startLine = lineNumber * 10 + index;
+                const startLine = (lineNumber + 9) * (index + 1);
 
                 return (
-                  <React.Fragment key={index}>
-                    <p className="text">
-                      <span className="text_number">{startLine}</span>
-                      <span className="dot">............</span>
-                      <span className="text-moon_mist">{"{"}</span>
+                  <p className="text" key={index}>
+                    <span className="text_number">{startLine}</span>
+                    <span className="dot">............</span>
+                    <span className="text-moon_mist">{"{"}</span>
 
-                      {Object.entries(item).map(([key, value], subIndex) => {
-                        const subLine = startLine + subIndex + 1;
-                        return (
-                          <p className="text" key={subIndex}>
-                            <span className="text_number">{subLine}</span>
-                            <span className="dot">...............</span>
-                            <span className="text-moon_mist">{key} : </span>
-                            <span className="text-green font-normal">
-                              {"'"}
-                              {value}
-                              {"'"}
-                            </span>
-                            ,
-                          </p>
-                        );
-                      })}
+                    {Object.entries(item).map(([key, value], subIndex) => {
+                      const subLine = startLine + subIndex + 1;
+                      return (
+                        <p className="text" key={subIndex}>
+                          <span className="text_number">{subLine}</span>
+                          <span className="dot">...............</span>
+                          <span className="text-moon_mist">{key} : </span>
+                          <span className="text-green font-normal">
+                            {"'"}
+                            {value}
+                            {"'"}
+                          </span>
+                          ,
+                        </p>
+                      );
+                    })}
 
-                      <span className="text_number">
-                        {startLine + Object.entries(item).length + 1}
-                      </span>
-                      <span className="dot">............</span>
-                      <span className="text-moon_mist">{"},"}</span>
-                    </p>
-                  </React.Fragment>
+                    <span className="text_number">
+                      {startLine + Object.entries(item).length + 1}
+                    </span>
+                    <span className="dot">............</span>
+                    <span className="text-moon_mist">{"},"}</span>
+                  </p>
                 );
               })}
 
