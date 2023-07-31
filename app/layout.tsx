@@ -3,7 +3,10 @@ import "../styles/components.scss";
 import { League_Spartan } from "next/font/google";
 import localFont from "next/font/local";
 
-const league_spartan = League_Spartan({ subsets: ["latin"] });
+const league_spartan = League_Spartan({
+  subsets: ["latin"],
+  variable: "--font-league-spartan",
+});
 
 const sometype_mono = localFont({
   src: [
@@ -13,27 +16,27 @@ const sometype_mono = localFont({
       style: "normal",
     },
     {
-      path: "../fonts//SometypeMono-BoldItalic.ttf",
+      path: "../fonts/SometypeMono-BoldItalic.ttf",
       weight: "700",
       style: "italic",
     },
     {
-      path: "../fonts//SometypeMono-Italic.ttf",
+      path: "../fonts/SometypeMono-Italic.ttf",
       weight: "400",
       style: "italic",
     },
     {
-      path: "../fonts//SometypeMono-Medium.ttf",
+      path: "../fonts/SometypeMono-Medium.ttf",
       weight: "600",
       style: "normal",
     },
     {
-      path: "../fonts//SometypeMono-MediumItalic.ttf",
+      path: "../fonts/SometypeMono-MediumItalic.ttf",
       weight: "600",
       style: "italic",
     },
     {
-      path: "../fonts//SometypeMono-Regular.ttf",
+      path: "../fonts/SometypeMono-Regular.ttf",
       weight: "400",
       style: "normal",
     },
@@ -52,8 +55,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      {/* use 2 fonts above */}
-      <body className={`${league_spartan} ${sometype_mono}`}>{children}</body>
+      <body className={`${league_spartan.variable} ${sometype_mono.className}`}>
+        {children}
+      </body>
     </html>
   );
 }

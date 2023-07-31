@@ -8,8 +8,8 @@ type Props = {};
 
 export default function Header({}: Props) {
   return (
-    <header className="flex flex-row justify-between fixed top-0 left-0 right-0 px-5 py-5 text-white z-50">
-      <div className="flex flex-1 justify-start items-center max-w-sm">
+    <header className="flex flex-row justify-between fixed top-0 left-0 right-0 px-4 py-6 text-white z-50 md:px-10">
+      <div className="flex flex-1 justify-start items-center max-w-[200px] ">
         <Logo />
         {/* <Image src="/images/logo.svg" width={50} height={50} alt="jaskdanj"/> */}
       </div>
@@ -31,10 +31,14 @@ export default function Header({}: Props) {
       </div>
 
       {/* no mobile */}
-      <div className="hidden gap-20 md:flex">
+      <div className="hidden gap-20 md:flex items-center leading-[normal]">
         {navMenu.map((item, index) => {
           return (
-            <Link key={index} href={item.link}>
+            <Link
+              key={index}
+              href={item.link}
+              className="text-[20px] text-regular font-medium"
+            >
               {item.name}/&gt;
             </Link>
           );

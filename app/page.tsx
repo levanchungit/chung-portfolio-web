@@ -7,8 +7,8 @@ export default function Home() {
     <>
       <Header />
       <Start />
-      <Work />
-      <About />
+      {/* <Work />
+      <About /> */}
     </>
   );
 }
