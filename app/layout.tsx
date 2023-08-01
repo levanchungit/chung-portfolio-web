@@ -1,5 +1,5 @@
 import "./globals.css";
-import "../styles/components.scss";
+import "../styles/globals.scss";
 import { League_Spartan } from "next/font/google";
 import localFont from "next/font/local";
 
@@ -27,12 +27,12 @@ const sometype_mono = localFont({
     },
     {
       path: "../fonts/SometypeMono-Medium.ttf",
-      weight: "600",
+      weight: "500",
       style: "normal",
     },
     {
       path: "../fonts/SometypeMono-MediumItalic.ttf",
-      weight: "600",
+      weight: "500",
       style: "italic",
     },
     {
@@ -55,7 +55,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${league_spartan.variable} ${sometype_mono.className}`}>
+      <body
+        suppressHydrationWarning={true}
+        className={`${league_spartan.variable} ${sometype_mono.className}`}
+      >
         {children}
       </body>
     </html>
