@@ -9,12 +9,12 @@ export default function Work() {
       </div>
       <div className="flex flex-col gap-5 pb-8">
         <div className="flex flex-col gap-2">
-          <h2 className=" text-moon_mist">Work/&gt;</h2>
-          <p className=" text-white">
+          <h2 className="text-moon_mist sm:text-xl">Work/&gt;</h2>
+          <p className="text-white">
             Selected UI web, mobile, video projects...
           </p>
         </div>
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="flex flex-col gap-8">
           {itemWorks.map((item) => (
             <ItemWork
               key={item.id}

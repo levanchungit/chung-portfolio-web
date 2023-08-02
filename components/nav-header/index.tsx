@@ -8,10 +8,9 @@ type Props = {};
 
 export default function Header({}: Props) {
   return (
-    <header className="flex flex-row justify-between fixed top-0 left-0 right-0 px-4 py-6 text-white z-50 md:px-10">
+    <header className="flex flex-row justify-between fixed top-0 left-0 right-0 px-4 py-6 text-white z-50 md:px-10 bg-[rgba(0,0,0,0.3)]">
       <div className="flex flex-1 justify-start items-center max-w-[200px] ">
         <Logo />
-        {/* <Image src="/images/logo.svg" width={50} height={50} alt="jaskdanj"/> */}
       </div>
       <div className="flex flex-1 justify-end items-center md:hidden">
         <svg

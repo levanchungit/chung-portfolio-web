@@ -10,7 +10,7 @@ export default function ItemWork({ id, title, image }: Props) {
   return (
     <div className="flex flex-row justify-end items-center relative">
       <div className="flex flex-col text-white w-[200px] absolute left-0">
-        <h2 className={`font-bold`}>{title}</h2>
+        <h2 className="font-bold">{title}</h2>
         <div className="flex flex-col h-px w-full bg-main"></div>
         <h2 className="">{id > 9 ? id : `0${id}`}</h2>
         <svg
@@ -33,7 +33,7 @@ export default function ItemWork({ id, title, image }: Props) {
           src={image}
           width={200}
           height={100}
-          className="cursor-pointer sm:w-2/3 md:1/2 "
+          className="cursor-pointer"
         />
       </div>
     </div>
