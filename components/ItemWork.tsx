@@ -9,10 +9,20 @@ type Props = {
 
 export default function ItemWork({ index, id, title, image }: Props) {
   return (
-    <div className={`sm: flex `}>
-      <div className="flex flex-row  items-center">
-        <div className="flex flex-col text-white w-[200px] ">
-          <h2 className="font-bold sm: text-xl">{title}</h2>
+    <div className={`flex sm:${index % 2 == 0 ? null : "flex-row-reverse"}`}>
+      <div className="">
+        <Image
+          alt="Picture of the author"
+          src={image}
+          width={200}
+          height={100}
+          className=""
+        />
+      </div>
+
+      <div className="flex flex-row items-center">
+        <div className="flex flex-col text-white w-[200px]">
+          <h2 className="font-bold text-[16px] sm:text-xl">{title}</h2>
           <div className="flex flex-col h-px w-full bg-main"></div>
           <h2 className="">{id > 9 ? id : `0${id}`}</h2>
           <svg
@@ -27,16 +37,6 @@ export default function ItemWork({ index, id, title, image }: Props) {
               fill="#D9D9D9"
             />
           </svg>
-        </div>
-
-        <div className="">
-          <Image
-            alt="Picture of the author"
-            src={image}
-            width={200}
-            height={100}
-            className="cursor-pointer sm:min-w-[400px]"
-          />
         </div>
       </div>
     </div>

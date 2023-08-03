@@ -26,14 +26,14 @@ export const itemWorks: IItemWork[] = [
     title: "TinVietSoft Warehouse Management",
     numberCount: "00",
     image:
-      "https://res.cloudinary.com/dq7xnkfde/image/upload/v1688998284/2Smartphone_12_max_pro_and_three_ui_screen_mockups_kkzfov.jpg",
+      "https://res.cloudinary.com/dzhlsdyqv/image/upload/v1691031971/2Smartphone_12_max_pro_and_three_ui_screen_mockups_t3xewq.jpg",
   },
   {
     id: 1,
     title: "Seven Shop",
     numberCount: "01",
     image:
-      "https://res.cloudinary.com/dq7xnkfde/image/upload/v1688998372/2_hqaird.jpg",
+      "https://res.cloudinary.com/dzhlsdyqv/image/upload/v1691031976/2_epfnjc.jpg",
   },
   {
     id: 2,
