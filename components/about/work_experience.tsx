@@ -1,16 +1,14 @@
-import { listEducation, listExperience, listSkills } from "@/global/constants";
-
-type Props = {
-  
-};
+import { listExperience } from "@/global/constants";
+import { useCounter } from "../context";
+type Props = {};
 
 export default function WorkExperience({}: Props) {
-  let lineNumber = 1;
+  const { count } = useCounter();
+  let lineNumber = count;
   let lineOffset = 0;
-  let lineOffset2 = 0;
   return (
     <>
-      <p>
+      <div>
         <span className="text_number">{lineNumber + 8}</span>
         <span className="dot">......</span>
         <span className="text-orange">
@@ -23,14 +21,14 @@ export default function WorkExperience({}: Props) {
           <span className="text-main">return </span>
           <span className="text-moon_mist">{"["}</span>
         </p>
-      </p>
+      </div>
       {listExperience.map((item, index) => {
         let numPair = Object.keys(item).length;
         let startLine = lineNumber + 10 + index * (numPair + 2);
         lineOffset += numPair + 2;
 
         return (
-          <p className="text" key={index}>
+          <div className="text" key={index}>
             <span className="text_number">{startLine}</span>
             <span className="dot">............</span>
             <span className="text-moon_mist">{"{"}</span>
@@ -55,20 +53,20 @@ export default function WorkExperience({}: Props) {
             <span className="text_number">{startLine + numPair + 1}</span>
             <span className="dot">............</span>
             <span className="text-moon_mist">{"},"}</span>
-          </p>
+          </div>
         );
       })}
 
-      <p>
+      <div>
         <span className="text_number">{lineNumber + 10 + lineOffset}</span>
         <span className="dot">.........</span>
         <span className="text-moon_mist">{"]"}</span>
-      </p>
-      <p>
+      </div>
+      <div>
         <span className="text_number">{lineNumber + 11 + lineOffset}</span>
         <span className="dot">......</span>
         <span>{"}"}</span>,
-      </p>
+      </div>
     </>
   );
 }

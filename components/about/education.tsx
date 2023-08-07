@@ -1,35 +1,37 @@
 import { listEducation } from "@/global/constants";
+import { useCounter } from "../context";
 
 type Props = {};
 
 export default function Education({}: Props) {
-  let lineNumber = 1;
+  const { count } = useCounter();
+  let lineNumber = count;
   let lineOffset = 0;
   let lineOffset2 = 0;
   return (
     <>
-      <p>
+      <div>
         <span className="text_number">{lineNumber + 12 + lineOffset}</span>
         <span className="dot">......</span>
         <span className="text-orange">
           education <span>()</span>{" "}
         </span>
         {"{"}
-      </p>
+      </div>
 
-      <p className="text">
+      <div className="text">
         <span className="text_number">{lineNumber + 13 + lineOffset}</span>
         <span className="dot">.........</span>
         <span className="text-main">return </span>
         <span className="text-moon_mist">{"["}</span>
-      </p>
+      </div>
 
       {listEducation.map((item, index) => {
         let numPair = Object.keys(item).length;
         let startLine = lineNumber + 14 + lineOffset + index * (numPair + 2);
         lineOffset2 += numPair + 2;
         return (
-          <p className="text" key={index}>
+          <div className="text" key={index}>
             <span className="text_number">{startLine}</span>
             <span className="dot">............</span>
             <span className="text-moon_mist">{"{"}</span>
@@ -54,25 +56,25 @@ export default function Education({}: Props) {
             <span className="text_number">{startLine + numPair + 1}</span>
             <span className="dot">............</span>
             <span className="text-moon_mist">{"},"}</span>
-          </p>
+          </div>
         );
       })}
 
-      <p className="text">
+      <div className="text">
         <span className="text_number">
           {" "}
           {lineNumber + 14 + lineOffset2 + lineOffset}
         </span>
         <span className="dot">.........</span>
         <span className="text-moon_mist">{"]"} </span>
-      </p>
-      <p>
+      </div>
+      <div>
         <span className="text_number">
           {lineNumber + 15 + lineOffset2 + lineOffset}
         </span>
         <span className="dot">......</span>
         <span>{"}"}</span>,
-      </p>
+      </div>
     </>
   );
 }

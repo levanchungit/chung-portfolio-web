@@ -9,14 +9,14 @@ type Props = {
 
 export default function ItemWork({ index, id, title, image }: Props) {
   return (
-    <div className={`flex sm:${index % 2 == 0 ? null : "flex-row-reverse"}`}>
+    <div className={`flex md:${index % 2 == 1 ? "flex-row-reverse" : null}`}>
       <div className="">
         <Image
           alt="Picture of the author"
           src={image}
           width={200}
           height={100}
-          className=""
+          className="min-w-[100px] md:min-w-[200px]"
         />
       </div>
 

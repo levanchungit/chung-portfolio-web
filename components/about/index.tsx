@@ -1,17 +1,18 @@
-import { listEducation, listExperience, listSkills } from "@/global/constants";
+"use client";
 import WorkExperience from "./work_experience";
 import Education from "./education";
 import Skills from "./skills";
+import { useCounter } from "../context";
 
 type Props = {};
 
 export default function About({}: Props) {
-  let lineNumber = 1;
-  let lineOffset = 0;
-  let lineOffset2 = 0;
+  const { count } = useCounter();
+  let lineNumber = count;
+
   return (
-    <div className="flex w-full min-h-screen px-12 bg-about bg-cover bg-center overflow-hidden md:flex-row md:justify-start md:px-10">
-      <div className="flex flex-1 h-[1200px] gap-4 relative">
+    <div className="flex w-full min-h-screen px-10 bg-about bg-cover bg-center overflow-hidden md:flex-row md:justify-start sm:px-[20%]">
+      <div className="flex flex-1 h-[1600px] gap-4 relative">
         <div className="w-0.5 h-full bg-main rounded-full relative top-[2%]">
           <div className="line"></div>
         </div>
@@ -84,11 +85,11 @@ export default function About({}: Props) {
                 ,
               </p>
               {/* WORK EXPERIENCE */}
-              <WorkExperience />
+              {/* <WorkExperience /> */}
               {/* EDUCATION */}
-              <Education/>
+              <Education />
               {/* SKILLS */}
-              <Skills/>
+              <Skills />
             </div>
           </div>
         </div>
