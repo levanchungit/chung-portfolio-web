@@ -85,7 +85,7 @@ export default function About({}: Props) {
                 ,
               </p>
               {/* WORK EXPERIENCE */}
-              {/* <WorkExperience /> */}
+              <WorkExperience />
               {/* EDUCATION */}
               <Education />
               {/* SKILLS */}
