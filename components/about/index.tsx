@@ -11,15 +11,15 @@ export default function About({}: Props) {
   let lineNumber = count;
 
   return (
-    <div className="flex w-full min-h-screen px-10 bg-about bg-cover bg-center overflow-hidden md:flex-row md:justify-start sm:px-[20%]">
-      <div className="flex flex-1 h-[1600px] gap-4 relative">
+    <div className="flex w-full min-h-screen p-10 bg-about bg-cover bg-center overflow-hidden md:flex-row md:justify-start sm:px-[20%]">
+      <div className="flex flex-1  gap-4 relative">
         <div className="w-0.5 h-full bg-main rounded-full relative top-[2%]">
           <div className="line"></div>
         </div>
-        <div className="flex flex-1 flex-col relative top-[1%]">
+        <div className="flex flex-1 flex-col">
           <h1 className="text-18 text">About/&gt;</h1>
 
-          <div className="flex flex-col gap-2 absolute top-[4%]">
+          <div className="flex flex-col gap-2">
             <p className="text">
               <span className="text_number">{lineNumber}</span>
               <span className="text-main">function</span>{" "}

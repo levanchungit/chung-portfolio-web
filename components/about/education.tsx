@@ -11,7 +11,7 @@ export default function Education({}: Props) {
   return (
     <>
       <div>
-        <span className="text_number">{lineNumber + 12 + lineOffset}</span>
+        <span className="text_number">{lineNumber + 26 + lineOffset}</span>
         <span className="dot">......</span>
         <span className="text-orange">
           education <span>()</span>{" "}
@@ -20,7 +20,7 @@ export default function Education({}: Props) {
       </div>
 
       <div className="text">
-        <span className="text_number">{lineNumber + 13 + lineOffset}</span>
+        <span className="text_number">{lineNumber + 27 + lineOffset}</span>
         <span className="dot">.........</span>
         <span className="text-main">return </span>
         <span className="text-moon_mist">{"["}</span>
@@ -28,7 +28,7 @@ export default function Education({}: Props) {
 
       {listEducation.map((item, index) => {
         let numPair = Object.keys(item).length;
-        let startLine = lineNumber + 14 + lineOffset + index * (numPair + 2);
+        let startLine = lineNumber + 28 + lineOffset + index * (numPair + 2);
         lineOffset2 += numPair + 2;
         return (
           <div className="text" key={index}>
@@ -63,14 +63,14 @@ export default function Education({}: Props) {
       <div className="text">
         <span className="text_number">
           {" "}
-          {lineNumber + 14 + lineOffset2 + lineOffset}
+          {lineNumber + 28 + lineOffset2 + lineOffset}
         </span>
         <span className="dot">.........</span>
         <span className="text-moon_mist">{"]"} </span>
       </div>
       <div>
         <span className="text_number">
-          {lineNumber + 15 + lineOffset2 + lineOffset}
+          {lineNumber + 29 + lineOffset2 + lineOffset}
         </span>
         <span className="dot">......</span>
         <span>{"}"}</span>,
