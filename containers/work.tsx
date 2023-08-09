@@ -15,15 +15,18 @@ export default function Work() {
               Selected UI web, mobile, video projects...
             </p>
           </div>
-          <div className="flex flex-col gap-8">
+          <div className="list-work-experience">
             {itemWorks.map((item, index) => (
-              <ItemWork
+              <div
                 key={item.id}
-                id={item.id}
-                title={item.title}
-                image={item.image}
-                index={index}
-              />
+                className={`item-wrapper ${index % 2 == 1 ? "reverse" : ""}`}
+              >
+                <ItemWork
+                  id={item.id}
+                  title={item.title}
+                  image={item.image}
+                />
+              </div>
             ))}
           </div>
         </div>

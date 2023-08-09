@@ -1,3 +1,31 @@
 .work-container {
   @apply flex flex-row w-full gap-[18px] bg-red-primary px-[60px] pt-8 sm:px-[25%];
 }
+
+.list-work-experience {
+  @apply flex flex-col gap-8;
+}
+
+.item-wrapper {
+  @apply flex flex-row;
+  @apply md:flex-col;
+
+  &.reverse {
+    @apply items-start;
+    @apply md:items-end;
+  }
+}
+
+.item-work {
+  @apply flex w-fit relative;
+
+  .content {
+    @apply flex flex-col justify-center text-white w-[200px] h-full absolute left-auto right-[-25%];
+    @apply md:w-[300px];
+
+    &.reverse{
+      @apply left-auto right-[-25%];
+      @apply md:left-[-25%] md:right-auto;
+    }
+  }
+}

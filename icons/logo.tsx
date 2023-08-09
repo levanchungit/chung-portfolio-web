@@ -1,6 +1,4 @@
-type Props = {};
-
-export default function Logo({}: Props) {
+export default function Logo() {
   return (
     <svg
       id="LogoChungPortfolio"

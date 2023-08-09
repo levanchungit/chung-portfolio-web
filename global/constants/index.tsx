@@ -22,35 +22,35 @@ type IItemWork = {
 
 export const itemWorks: IItemWork[] = [
   {
-    id: 0,
+    id: 1,
     title: "TinVietSoft Warehouse Management",
     numberCount: "00",
     image:
       "https://res.cloudinary.com/dzhlsdyqv/image/upload/v1691031971/2Smartphone_12_max_pro_and_three_ui_screen_mockups_t3xewq.jpg",
   },
   {
-    id: 1,
+    id: 2,
     title: "Seven Shop",
     numberCount: "01",
     image:
       "https://res.cloudinary.com/dzhlsdyqv/image/upload/v1691031976/2_epfnjc.jpg",
   },
   {
-    id: 2,
+    id: 3,
     title: "Eatery",
     numberCount: "02",
     image:
       "https://res.cloudinary.com/dq7xnkfde/image/upload/v1688998284/2Smartphone_12_max_pro_and_three_ui_screen_mockups_kkzfov.jpg",
   },
   {
-    id: 3,
+    id: 4,
     title: "EU",
     numberCount: "03",
     image:
       "https://res.cloudinary.com/dq7xnkfde/image/upload/v1688998284/2Smartphone_12_max_pro_and_three_ui_screen_mockups_kkzfov.jpg",
   },
   {
-    id: 4,
+    id: 5,
     title: "Super Mario",
     numberCount: "04",
     image:
