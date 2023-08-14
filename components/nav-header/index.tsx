@@ -2,11 +2,17 @@ import Link from "next/link";
 import React from "react";
 import { navMenu } from "@/global/constants";
 import Logo from "@/icons/logo";
-import Image from "next/image";
 
+import { motion, useScroll, useSpring } from "framer-motion";
 type Props = {};
 
 export default function Header({}: Props) {
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
   return (
     <header className="flex flex-row justify-between fixed top-0 left-0 right-0 px-4 py-6 text-white z-50 md:px-10 bg-[rgba(0,0,0,0.3)]">
       <div className="flex flex-1 justify-start items-center max-w-[200px] ">
@@ -43,6 +49,8 @@ export default function Header({}: Props) {
           );
         })}
       </div>
+
+      <motion.div className="progress-bar" style={{ scaleX }}></motion.div>
     </header>
   );
 }

@@ -1,2 +1,29 @@
 @import "./components";
 @import "./work_container";
+
+.progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  transform-origin: 0%;
+  z-index: 9999;
+  opacity: 0.7;
+  @apply bg-main;
+}
+
+::-webkit-scrollbar {
+  height: 12px;
+  width: 5px;
+  @apply bg-about;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-main;
+  -webkit-border-radius: 1ex;
+}
+
+::-webkit-scrollbar-corner {
+  @apply bg-transparent;
+}

@@ -6,6 +6,12 @@
   @apply text-[16px] text-moon_mist font-bold font-stm;
 }
 
+.row {
+  &:hover {
+    background-color: rgb(44, 44, 44);
+  }
+}
+
 .text-name {
   @apply font-bold text-main font-ls;
 }

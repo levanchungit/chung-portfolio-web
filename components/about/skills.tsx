@@ -8,7 +8,7 @@ export default function Skills({}: Props) {
   let lineOffset2 = 0;
   return (
     <>
-      <p>
+      <p className="row">
         <span className="text_number">
           {lineNumber + 42 + lineOffset2 + lineOffset}
         </span>
@@ -18,7 +18,7 @@ export default function Skills({}: Props) {
         </span>
         {"{"}
       </p>
-      <p className="text">
+      <p className="text row">
         <span className="text_number">
           {lineNumber + 43 + lineOffset2 + lineOffset}
         </span>
@@ -38,14 +38,14 @@ export default function Skills({}: Props) {
           })}
         </span>
       </p>
-      <p className="text">
+      <p className="text row">
         <span className="text_number">
           {lineNumber + 44 + lineOffset2 + lineOffset}
         </span>
         <span className="dot">.........</span>
         <span className="text-moon_mist">{"]"} </span>
       </p>
-      <p>
+      <p className="row">
         <span className="text_number">
           {lineNumber + 45 + lineOffset2 + lineOffset}
         </span>

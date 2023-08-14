@@ -9,13 +9,15 @@ export default function WorkExperience({}: Props) {
   return (
     <>
       <div>
-        <span className="text_number">{lineNumber + 8}</span>
-        <span className="dot">......</span>
-        <span className="text-orange">
-          workExperience <span>()</span>{" "}
-        </span>
-        {"{"}
-        <p className="text">
+        <p className="row">
+          <span className="text_number">{lineNumber + 8}</span>
+          <span className="dot">......</span>
+          <span className="text-orange">
+            workExperience <span>()</span>{" "}
+          </span>
+          {"{"}
+        </p>
+        <p className="text row">
           <span className="text_number">{lineNumber + 9}</span>
           <span className="dot">.........</span>
           <span className="text-main">return </span>
@@ -29,15 +31,17 @@ export default function WorkExperience({}: Props) {
 
         return (
           <div className="text" key={index}>
-            <span className="text_number">{startLine}</span>
-            <span className="dot">............</span>
-            <span className="text-moon_mist">{"{"}</span>
+            <p className="row">
+              <span className="text_number">{startLine}</span>
+              <span className="dot">............</span>
+              <span className="text-moon_mist">{"{"}</span>
+            </p>
 
             {Object.entries(item).map(([key, value], subIndex) => {
               let subLine = startLine + subIndex + 1;
               return (
-                <p className="text" key={subIndex}>
-                  <span className="text_number">{subLine}</span>
+                <p className="text row" key={subIndex}>
+                  <span className="text_number ">{subLine}</span>
                   <span className="dot">...............</span>
                   <span className="text-moon_mist">{key} : </span>
                   <span className="text-green font-normal">
@@ -50,19 +54,21 @@ export default function WorkExperience({}: Props) {
               );
             })}
 
-            <span className="text_number">{startLine + numPair + 1}</span>
-            <span className="dot">............</span>
-            <span className="text-moon_mist">{"},"}</span>
+            <p className="row">
+              <span className="text_number">{startLine + numPair + 1}</span>
+              <span className="dot">............</span>
+              <span className="text-moon_mist">{"},"}</span>
+            </p>
           </div>
         );
       })}
 
-      <div>
+      <div className="row">
         <span className="text_number">{lineNumber + 10 + lineOffset}</span>
         <span className="dot">.........</span>
         <span className="text-moon_mist">{"]"}</span>
       </div>
-      <div>
+      <div className="row">
         <span className="text_number">{lineNumber + 11 + lineOffset}</span>
         <span className="dot">......</span>
         <span>{"}"}</span>,

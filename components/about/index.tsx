@@ -20,19 +20,19 @@ export default function About({}: Props) {
           <h1 className="text-18 text">About/&gt;</h1>
 
           <div className="flex flex-col gap-2">
-            <p className="text">
+            <p className="text row">
               <span className="text_number">{lineNumber}</span>
               <span className="text-main">function</span>{" "}
               <span className="text-moon_mist">createLeVanChung() &#123;</span>
             </p>
 
-            <p className="text">
+            <p className="text row">
               <span className="text_number">{lineNumber + 1}</span>
               <span className="dot">...</span>
               <span className="text-comment">{"//"} I can, because I did.</span>
             </p>
 
-            <p className="text">
+            <p className="text row">
               <span className="text_number">{lineNumber + 2}</span>
               <span className="dot">...</span>
               <span className="text-comment">
@@ -40,7 +40,7 @@ export default function About({}: Props) {
               </span>
             </p>
 
-            <p className="text">
+            <p className="text row">
               <span className="text_number">{lineNumber + 3}</span>
               <span className="dot">...</span>
               <span className="text-main">return </span>
@@ -48,7 +48,7 @@ export default function About({}: Props) {
             </p>
 
             <div className="text">
-              <p>
+              <p className="row">
                 <span className="text_number">{lineNumber + 4}</span>
                 <span className="dot">......</span>
                 name ={" "}
@@ -57,7 +57,7 @@ export default function About({}: Props) {
                 </span>
                 ,
               </p>
-              <p>
+              <p className="row">
                 <span className="text_number">{lineNumber + 5}</span>
                 <span className="dot">......</span>
                 dayOfBirth ={" "}
@@ -66,7 +66,7 @@ export default function About({}: Props) {
                 </span>
                 ,
               </p>
-              <p>
+              <p className="row">
                 <span className="text_number">{lineNumber + 6}</span>
                 <span className="dot">......</span>
                 email ={" "}
@@ -75,7 +75,7 @@ export default function About({}: Props) {
                 </span>
                 ,
               </p>
-              <p>
+              <p className="row">
                 <span className="text_number">{lineNumber + 7}</span>
                 <span className="dot">......</span>
                 phone ={" "}
