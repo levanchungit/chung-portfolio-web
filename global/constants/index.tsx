@@ -1,3 +1,10 @@
+type IItemWork = {
+  id: number;
+  title: string;
+  numberCount: string;
+  image: string;
+};
+
 export const navMenu = [
   {
     name: "Start",
@@ -12,13 +19,6 @@ export const navMenu = [
     link: "/",
   },
 ];
-
-type IItemWork = {
-  id: number;
-  title: string;
-  numberCount: string;
-  image: string;
-};
 
 export const itemWorks: IItemWork[] = [
   {
