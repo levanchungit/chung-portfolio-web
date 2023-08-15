@@ -4,7 +4,7 @@ type Props = {};
 
 export default function Start({}: Props) {
   const ref = useRef(null);
-  const isInView = useInView(ref);
+  const isInView = useInView(ref, { once: true });
   return (
     <div className="flex w-full h-screen items-center justify-items-center bg-background-start bg-cover bg-center overflow-hidden">
       <div className="w-0.5 h-full bg-main rounded-full relative left-10 top-[44%] sm:left-[20%]">

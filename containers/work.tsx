@@ -1,7 +1,12 @@
 import ItemWork from "@/components/ItemWork";
 import { itemWorks } from "@/global/constants";
+import { useInView } from "framer-motion";
+import React, { useRef } from "react";
 
 export default function Work() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
   return (
     <div className="flex w-full bg-background-start bg-cover relative overflow-hidden">
       <div className="w-0.5 bg-main h-full rounded-full absolute top-[4%] left-10 sm:left-[20%]">
@@ -19,13 +24,15 @@ export default function Work() {
             {itemWorks.map((item, index) => (
               <div
                 key={item.id}
+                ref={ref}
+                style={{
+                  transform: isInView ? "none" : "translateX(200px)",
+                  opacity: isInView ? 1 : 0,
+                  transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+                }}
                 className={`item-wrapper ${index % 2 == 1 ? "reverse" : ""}`}
               >
-                <ItemWork
-                  id={item.id}
-                  title={item.title}
-                  image={item.image}
-                />
+                <ItemWork id={item.id} title={item.title} image={item.image} />
               </div>
             ))}
           </div>

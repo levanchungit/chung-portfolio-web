@@ -1,8 +1,6 @@
 import Link from "next/link";
 import React from "react";
 import { navMenu } from "@/global/constants";
-import Logo from "@/icons/logo";
-
 import { motion, useScroll, useSpring } from "framer-motion";
 import Image from "next/image";
 type Props = {};
@@ -14,6 +12,20 @@ export default function Header({}: Props) {
     damping: 30,
     restDelta: 0.001,
   });
+
+  const handleMenuClick = (index: number) => {
+    console.log("index", index);
+    if (index === 0) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    } else if (index === 1) {
+      window.scrollTo({ top: 850, behavior: "smooth" });
+      return;
+    } else if (index === 2) {
+      window.scrollTo({ top: 2445, behavior: "smooth" });
+      return;
+    }
+  };
   return (
     <header className="flex flex-row justify-between fixed top-0 left-0 right-0 px-4 py-6 text-white z-50 md:px-10 bg-[rgba(0,0,0,0.3)]">
       <div className="flex flex-1 justify-start items-center max-w-[200px] ">
@@ -45,6 +57,7 @@ export default function Header({}: Props) {
               key={index}
               href={item.link}
               className="text-[20px] text-regular font-medium"
+              onClick={() => handleMenuClick(index)}
             >
               {item.name}/&gt;
             </Link>
