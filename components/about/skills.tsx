@@ -10,7 +10,7 @@ export default function Skills({}: Props) {
     <>
       <p className="row">
         <span className="text_number">
-          {lineNumber + 42 + lineOffset2 + lineOffset}
+          {lineNumber + 36 + lineOffset2 + lineOffset}
         </span>
         <span className="dot">......</span>
         <span className="text-orange">
@@ -20,7 +20,7 @@ export default function Skills({}: Props) {
       </p>
       <p className="text row">
         <span className="text_number">
-          {lineNumber + 43 + lineOffset2 + lineOffset}
+          {lineNumber + 37 + lineOffset2 + lineOffset}
         </span>
         <span className="dot">.........</span>
         <span className="text-main">return </span>
@@ -40,14 +40,14 @@ export default function Skills({}: Props) {
       </p>
       <p className="text row">
         <span className="text_number">
-          {lineNumber + 44 + lineOffset2 + lineOffset}
+          {lineNumber + 38 + lineOffset2 + lineOffset}
         </span>
         <span className="dot">.........</span>
         <span className="text-moon_mist">{"]"} </span>
       </p>
       <p className="row">
         <span className="text_number">
-          {lineNumber + 45 + lineOffset2 + lineOffset}
+          {lineNumber + 39 + lineOffset2 + lineOffset}
         </span>
         <span className="dot">......</span>
         <span>{"}"}</span>,

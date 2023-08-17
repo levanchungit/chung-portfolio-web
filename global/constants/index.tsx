@@ -26,35 +26,35 @@ export const itemWorks: IItemWork[] = [
     title: "TinVietSoft Warehouse Management",
     numberCount: "00",
     image:
-      "https://res.cloudinary.com/dzhlsdyqv/image/upload/v1691031971/2Smartphone_12_max_pro_and_three_ui_screen_mockups_t3xewq.jpg",
+      "https://res.cloudinary.com/dq7xnkfde/image/upload/v1688998284/2Smartphone_12_max_pro_and_three_ui_screen_mockups_kkzfov.jpg",
   },
   {
     id: 2,
     title: "Seven Shop",
     numberCount: "01",
     image:
-      "https://res.cloudinary.com/dzhlsdyqv/image/upload/v1691031976/2_epfnjc.jpg",
+      "https://res.cloudinary.com/dq7xnkfde/image/upload/v1688998372/2_hqaird.jpg",
   },
   {
     id: 3,
     title: "Eatery",
     numberCount: "02",
     image:
-      "https://res.cloudinary.com/dq7xnkfde/image/upload/v1688998284/2Smartphone_12_max_pro_and_three_ui_screen_mockups_kkzfov.jpg",
+      "https://res.cloudinary.com/dq7xnkfde/image/upload/v1692261165/Mockup-Home_Favorite_Detail_pufnbe.png",
   },
   {
     id: 4,
     title: "EU",
     numberCount: "03",
     image:
-      "https://res.cloudinary.com/dq7xnkfde/image/upload/v1688998284/2Smartphone_12_max_pro_and_three_ui_screen_mockups_kkzfov.jpg",
+      "https://res.cloudinary.com/dq7xnkfde/image/upload/v1692261856/EU_Mockup_2.png_yrafc6.png",
   },
   {
     id: 5,
     title: "Super Mario",
     numberCount: "04",
     image:
-      "https://res.cloudinary.com/dq7xnkfde/image/upload/v1688998284/2Smartphone_12_max_pro_and_three_ui_screen_mockups_kkzfov.jpg",
+      "https://res.cloudinary.com/dq7xnkfde/image/upload/v1692262225/choi-Mario-2_j7upzm.jpg",
   },
 ];
 
@@ -90,18 +90,20 @@ type IItemExperience = {
 
 export const listExperience: IItemExperience[] = [
   {
-    where: "TinVietSoft Human Resource Management",
+    where: "TinVietSoft - Human Resource Management",
     position: "Full-stack Developer",
     from: "Feb 2023",
     to: "July 2023",
-    description: "",
+    description:
+      "Programming with timekeeper, deployed application to production (android, ios) ",
   },
   {
-    where: "TinVietSoft human resource management",
-    position: "Frontend Developer",
-    from: "Feb 2023",
-    to: "July 2023",
-    description: "",
+    where: "Education - SevenShop Mobile & Web Admin",
+    position: "Leader",
+    from: "Jan 2023",
+    to: "April 2023",
+    description:
+      "Selling clothing, manage source code github, project management trello",
   },
 ];
 
@@ -114,15 +116,9 @@ type IItemEducation = {
 
 export const listEducation: IItemEducation[] = [
   {
-    school: "University of Information Technology",
-    major: "Software Engineering",
+    school: "FPT Polytechnic",
+    major: "Mobile Developer",
     from: "2021",
-    to: "2025",
-  },
-  {
-    school: "University of Information Technology",
-    major: "Software Engineering",
-    from: "2021",
-    to: "2025",
+    to: "2023",
   },
 ];
