@@ -25,36 +25,31 @@ export const itemWorks: IItemWork[] = [
     id: 1,
     title: "TinVietSoft Warehouse Management",
     numberCount: "00",
-    image:
-      "https://res.cloudinary.com/dq7xnkfde/image/upload/v1688998284/2Smartphone_12_max_pro_and_three_ui_screen_mockups_kkzfov.jpg",
+    image: "/images/work_tvs.jpg",
   },
   {
     id: 2,
     title: "Seven Shop",
     numberCount: "01",
-    image:
-      "https://res.cloudinary.com/dq7xnkfde/image/upload/v1688998372/2_hqaird.jpg",
+    image: "/images/work_sevenshop.jpg",
   },
   {
     id: 3,
     title: "Eatery",
     numberCount: "02",
-    image:
-      "https://res.cloudinary.com/dq7xnkfde/image/upload/v1692261165/Mockup-Home_Favorite_Detail_pufnbe.png",
+    image: "/images/work_eatery.png",
   },
   {
     id: 4,
     title: "EU",
     numberCount: "03",
-    image:
-      "https://res.cloudinary.com/dq7xnkfde/image/upload/v1692261856/EU_Mockup_2.png_yrafc6.png",
+    image: "/images/work_eu.png",
   },
   {
     id: 5,
     title: "Super Mario",
     numberCount: "04",
-    image:
-      "https://res.cloudinary.com/dq7xnkfde/image/upload/v1692262225/choi-Mario-2_j7upzm.jpg",
+    image: "/images/work_mario.jpg",
   },
 ];
 

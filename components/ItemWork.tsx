@@ -1,5 +1,7 @@
 import Arrow from "@/icons/arrow";
 import Image from "next/image";
+import React, { useRef } from "react";
+import { useInView } from "framer-motion";
 
 type Props = {
   id: number;
@@ -8,8 +10,22 @@ type Props = {
 };
 
 export default function ItemWork({ id, title, image }: Props) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
   return (
-    <div className="item-work">
+    <div
+      className="item-work"
+      ref={ref}
+      style={{
+        transform: isInView
+          ? "none"
+          : id % 2 == 0
+          ? "translateX(200px)"
+          : "translateX(-200px)",
+        opacity: isInView ? 1 : 0,
+        transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+      }}
+    >
       <div className="image">
         <Image
           alt="Picture of the author"
