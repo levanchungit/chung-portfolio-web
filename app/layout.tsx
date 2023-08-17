@@ -44,8 +44,9 @@ const sometype_mono = localFont({
 });
 
 export const metadata = {
-  title: "Chung Portfolio",
-  description: "L",
+  title: "Le Van Chung Portfolio",
+  description: "Mobile Developer",
+  image: '/images/work_eatery.png',
 };
 
 export default function RootLayout({

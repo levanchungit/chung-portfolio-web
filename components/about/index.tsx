@@ -12,8 +12,8 @@ export default function About({}: Props) {
 
   return (
     <div className="flex w-full min-h-screen p-10 bg-about bg-cover bg-center overflow-hidden md:flex-row md:justify-start sm:px-[20%]">
-      <div className="flex flex-1  gap-16 relative">
-        <div className="w-0.5 h-full bg-main rounded-full relative top-[2%]">
+      <div className="flex flex-1 gap-4 relative sm:gap-16">
+        <div className="w-0.5 h-full bg-main rounded-full relative top-[1%]">
           <div className="line"></div>
         </div>
         <div className="flex flex-1 flex-col">
