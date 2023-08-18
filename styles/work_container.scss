@@ -1,0 +1,39 @@
+.work-container {
+  @apply flex flex-row w-full gap-[18px] bg-red-primary px-[60px] pt-8 sm:px-[25%];
+}
+
+.list-work-experience {
+  @apply flex flex-col gap-8;
+}
+
+.item-wrapper {
+  @apply flex flex-row;
+  @apply md:flex-col;
+
+  &.reverse {
+    @apply items-start;
+    @apply md:items-end;
+  }
+}
+
+.item-work {
+  @apply flex w-fit relative;
+  transition: transform 0.3s ease-in-out;
+
+  .content {
+    @apply flex flex-col justify-center text-white w-[200px] h-full absolute left-auto right-[-25%];
+    @apply md:w-[300px];
+
+    &.reverse {
+      @apply left-auto right-[-25%];
+      @apply md:left-[-25%] md:right-auto;
+    }
+    text-shadow: -1px 0px 16px #000000b3;
+  }
+
+  //when hover transform 3d
+  &:hover {
+    transform: translate3d(5px, -5px, 2000px) scale3d(1.05, 1.05, 1);
+    box-shadow: 0 0 20px 0 rgba(110, 110, 110, 0.5);
+  }
+}
