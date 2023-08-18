@@ -46,7 +46,17 @@ const sometype_mono = localFont({
 export const metadata = {
   title: "Le Van Chung Portfolio",
   description: "Mobile Developer",
-  image: '/images/work_eatery.png',
+  openGraph: {
+    images: [
+      {
+        url: "/images/work_eatery.png",
+        width: 800,
+        height: 600,
+        alt: "Eatery",
+      },
+    ],
+  },
+  keywords: ["Mobile", "Developer Mobile", "ChungPortfolio", "LeVanChung"],
 };
 
 export default function RootLayout({
